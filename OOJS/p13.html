@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Write protect the values</h3>
+
+    <script>
+        let user = {
+            email : "tom@gmail.com" 
+        }
+
+        Object.defineProperty(user, 'name',{
+            value: 'tom',
+            writable: false //true => writable, false => readable (write protect) default
+        });
+
+        // Object.defineProperty(user, 'age', {
+        //     value: 23,
+        //     writable:true //true => writable, false => readable (write protect) default
+        // })
+
+        console.log(user)
+
+        user.name = "ram";
+        user.email = "ram@gmail.com";
+        user.age = 20;
+
+        console.log("after name =",user)
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>concat()</title>
+</head>
+<body>
+    <h3>The JS Array concat() Method is used to merge two or more arrays together.This method does not alter the original arrays passed as arguments but instead return new Array.</h3>
+
+        <!-- syntax  -->
+
+        <!-- let array = oldArray.concat(value1,value2) -->
+
+    <!-- Parameter: The parameters of this method are the arrays of the values that need to be added to the given array.The number of arguments to this method depends upon the number of arrays or values to be merged. -->
+
+    <!-- Return value:This methods returns a newly created array that is created after merging all the arrays passed to the method as arguments  -->
+
+    <script>
+        let arr = ["i","l","o","v","e"];
+        let arr1 = ["y","o","u"];
+        let arr2 = ["goku"];
+        let arr3 = [143]
+
+        // console.log(arr.concat(arr1,arr2,arr3))
+        // console.log(arr)
+
+        document.write(`<h3> concat =  ${arr.concat(arr1,arr2,arr3)} </h3>`)
+    </script>
+
+     <script>
+        let arr4 = ["i","l","o","v","e"];
+
+        // console.log(arr4)
+
+        document.write(`<h3> concat =  ${arr4.concat("ram",["sam","kiran"])} </h3>`)
+    </script>
+</body>
+</html>

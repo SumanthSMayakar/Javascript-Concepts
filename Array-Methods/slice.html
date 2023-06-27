@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slice() Method</title>
+</head>
+<body>
+        <h3>The JS arr.slice() method returns a new array containing a portion of the array on which it is implemented.The original remains unchanged </h3>
+
+            <!-- syntax  -->
+              <!-- arr.slice(begin, end) -->
+
+            <!-- Parameters: This method accept two parameters as mentioned above and described below -->
+
+                <!-- begin: This parameter defines the starting index from where the portion is to be extracted.if this argument is missing then the mentioned takes begin as 0 as it is the default start value. -->
+
+                <!-- end: This parameter is the index up to which the portion is to be extracted (excluding the end index).if this argument is not defined then the array till the end is extracted as it is the default end value if the end value is greater than the length of the array. then the end value changes to the length of the array. -->
+            
+            <!-- Return value: This method returns a new array containing some portion of the original array  -->
+
+        <script>
+            let arr = [23,56,87,32,75,13];
+
+            let arr1 = arr.slice(2,4);
+
+            document.write(`<h3> before splice  = ${arr} </h3>`)
+
+            document.write(`<h3> after splice = ${arr1} </h3>`)
+        
+        </script>
+
+        <h5>Without parameter</h5>
+        
+        <script>
+            let arr2 = [23,56,87,32,75,13];
+
+            let arr3 = arr.slice();
+
+            document.write(`<h3> before splice  = ${arr2} </h3>`)
+
+            document.write(`<h3> after splice = ${arr3} </h3>`)
+        </script>
+
+        <h5>With single parameter</h5>
+
+        <script>
+             let arr4 = [23,56,87,32,75,13];
+
+             let arr5 = arr.slice(3);
+
+             document.write(`<h3> before splice  = ${arr4} </h3>`)
+
+             document.write(`<h3> after splice = ${arr5} </h3>`)
+        </script>
+
+</body>
+</html>

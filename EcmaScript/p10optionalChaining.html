@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+    <h3>Optional Chaining</h3>
+    <p>it is a new feature in javascript, introduced in ES2020.</p>
+
+    <h3>What is Optional Chaining</h3>
+    <h4>It is a safe way to access nested object properties, even if an intermediate property doesn't exist.It is represented by ?.</h4>
+    <h4>The optional chaining stops the evaluation if the value before ?. is undefined or null and returns undefined</h4>
+
+    <script>
+        // OPTIONAL CHAINING IN JAVASCRIPT
+
+        let user ={
+            name: 'John',
+            age: 20,
+            gender: 'Male',
+            hobbies:null,
+            contact: {
+                phone: 9876543210,
+                email: 'john@gmail.com',
+                address: {
+                    street: '10th Main Street',
+                    area: 'mandya',
+                    city: 'Mysore',
+                    country: 'India'
+                }
+            }
+        }
+
+        console.log(user.name);                 //John
+        console.log(user.birthYear);            //undefined        
+        console.log(user.contact.phone);        //7896543321
+        console.log(user.contact.city);         //undefined
+        // console.log(user.contact.city.name);    //Type Error: Cannot read properties of undefined (reading "name")
+        console.log(user.contact.city?.name); 
+        // console.log(user.hobbies.x);            //Type Error: Cannot read properties of null (reading "name")
+        // console.log(user.hobbies)
+
+        //  TO AVOID THIS TYPE ERROR
+        // 1.USING IF...ELSE STATEMENT
+        // 2.USING OPTIONAL CHAINING
+
+        // if(user.contact.city === null || user.contact.city === undefined){
+        //     console.log(undefined)
+        // }else{
+        //     console.log(user.contact.city.name)
+        // }
+
+        //user.contacts.city?.name
+
+        // USECASE OF OPTIONAL CHAINING
+        let text = document.querySelector('h2')?.innerText;
+        console.log(text)
+        
+    </script>
+</body>
+</html>

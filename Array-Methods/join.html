@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join() method</title>
+</head>
+<body>
+    <h3>The Js array join() method is used to join the elements of an array into a string. The elements of the string will be separated by a specified separator and its default value is a comma(,)</h3>
+
+    <p>join converts array to string</p>
+
+    <!-- syntax  -->
+    <!-- array.join() -->
+
+    <!-- Parameters : This method accepts a single parameter  -->
+        <!-- separator: It is optional it can be used a s parameter default value is comma(,) -->
+
+    <script>
+        let arr = ["s","a","m"];
+         console.log(arr.join('|')
+        )   
+
+        let arr1 = ["s","a","m"];
+         console.log(arr.join()
+        )   
+
+        let arr2 = ["s","a","m"];
+         console.log(arr.join('')
+        )   
+    </script>
+
+    <script>
+        //reversing a string to array to string
+        let Name = "sumanth mayakar";
+        let revName = Name.split(" ").reverse().join(' ')
+        console.log(revName)
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Object.values() method</h3>
+    <!-- it will return the array of values  -->
+
+    <script>
+        let user = {
+            name: "ram",
+            mobile: 9876434344,
+            age: 23,
+            email:"ram@gmail.com"
+        }
+
+        console.log(Object.values(user))
+
+        for(let item of Object.values(user)){
+            document.write(`<h3>${item}</h3>`)
+        }
+    </script>
+</body>
+</html>

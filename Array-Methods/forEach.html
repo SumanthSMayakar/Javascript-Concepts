@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach() method</title>
+</head>
+<body>
+    <h3>The arr.forEach() method calls the provided function once for each element of the array.The provided function may perform any kind of operation on the elements of the given array</h3>
+
+        <!-- syntax  -->
+         <!-- array.forEach(callback(element,index,arr),thisValue) -->
+
+    <!-- Parameters: This method accepts 2 methods -->
+
+          <!-- callback: it is the function of array that works on each element -->
+            <!-- element: This parameter holds the current value
+            index: it is an optional parameter holds the index of the current element
+            arr: it is an optional parameter holds the array object to which the current element belongs
+            thisArg: it is an optional parameter if a value is to be passed to the function to be used as its "this" value else the value "undefined" will be passed as its "this" value.
+
+        Return Value: The return value of this method is always undefined.This method may or may not change the original array provided as it depends upon the functionally of the argument function. -->
+
+    <script>
+
+        let num = [1,3,4,9,8];
+
+        function computeSquare(element){
+            console.log((element * element))
+        }
+
+            num.forEach(computeSquare)
+        
+    </script>
+
+</body>
+</html>

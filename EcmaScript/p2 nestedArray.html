@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+    <h1>Nested Array</h1>
+    <p>Destructuring of Nested Array</p>
+
+    <script>
+        let person = ["John", "Smith", 28, ["London","UK"]];
+
+        let [firstName, lastName, age, [city, country]] = person;
+
+        console.log(firstName);
+        console.log(lastName);
+        console.log(age);
+        console.log(city);
+        console.log(country);
+
+        // DESTRUCTURING FIRST & SECOND ELEMENT OF THE VARIABLE
+        console.log(person)
+
+
+        // A SIMPLE USE CASE OF ARRAY DESTRUCTURING
+        function returnTopperStudents(){
+            return ['Mark', 'Steve', 'Mery', 'John', 'Sarah']
+        }
+
+        let [topper1, topper2, topper3] = returnTopperStudents();
+
+        console.log(topper1);
+        console.log(topper2);
+        console.log(topper3);
+    </script>
+</body>
+</html>

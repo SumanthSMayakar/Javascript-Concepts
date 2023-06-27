@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort() method</title>
+</head>
+<body>
+    <h3>This method is used to sort the array in place in a given order according to the compare()function.If the method is omitted then the array is sorted in ascending order </h3>
+
+    <!-- syntax  -->
+        <!-- arr.sort(compareFunction)  -->
+
+    <!-- Parameters: This method accepts a single parameter  -->
+
+        <!-- compareFunction : This parameter is used to sort the elements according to different attributes and in a different order.
+            The compareFunction should return a Number. This returned value is used to sort the elements in the following way:
+            compareFunction(a,b) < 0, a is sorted before b (a comes before b).
+            compareFunction(a,b) > 0,b is sorted before a (b comes before a).
+            compareFunction(a,b) = 0,  a and b remain unchanged relative to each other. -->
+
+    <!-- Return Value: This method returns the reference of the sorted original array  -->
+
+    <script>
+            //numeric sorting
+            var priceList = [1000, 50, 20, 30, 3]
+
+            priceList.sort(function(a,b){
+                return a-b
+            });
+
+            console.log("Ascending =" + priceList)
+
+            priceList.sort((a,b) => b - a);
+
+            console.log("descending =" + priceList)
+
+            
+            // custom sorting an array of strings
+            var names = ["Adam", "Jeffrey", "Fabiano", "Danil", "Ben"];
+
+            function len_compare(a, b){
+                return a.length - b.length;
+            }
+
+            // sort according to string length
+            names.sort(len_compare);
+
+            console.log(names);
+    </script>
+</body>
+</html>

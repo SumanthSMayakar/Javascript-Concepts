@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Custom Constructor</h1>
+    <script>
+        function Car(){
+            let x = 12;
+            this.title = "Jeep";
+            this.model = 2022;
+            this.fuel = "petrol"
+            this.display = function(){
+                document.write(`<h3> display function </h3>`)
+            }
+        }
+
+        // ref instance of an Constructor
+        let a = new Car();
+
+        console.log(a)
+        document.write(`<h3>${a.title}</h3>`)
+        document.write(`<h3>${a.model}</h3>`)
+        document.write(`<h3>${a.fuel}</h3>`)
+        a.display()
+    </script>
+    
+</body>
+</html>

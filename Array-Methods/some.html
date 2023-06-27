@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>some() method</title>
+</head>
+<body>
+        <h4>It checks weather at least one of the elements of array satisfy the condition</h4>
+
+            <!-- syntax  -->
+            <!-- arr.some(callback(element,index,array),thisArg) -->
+
+        <!-- Parameter : This method accepts two parameter -->
+
+            <!-- callback: it is the function of array that works on each element -->
+            <!-- element: This parameter holds the current value
+            index: it is an optional parameter holds the index of the current element
+            arr: it is an optional parameter holds the array object to which the current element belongs
+            thisArg: it is an optional parameter if a value is to be passed to the function to be used as its "this" value else the value "undefined" will be passed as its "this" value.
+
+        Return Value:it returns true if one of the element of the array satisfies the condition if no element of the array satisfies it returns false-->
+
+                <script>
+                    function checkMinor(age) {
+                        return age < 18;
+                    }
+
+                    const ageArray = [34,23,45,12,56];
+
+                    let check = ageArray.some(checkMinor)
+
+                    console.log(check);
+                </script>
+</body>
+</html>

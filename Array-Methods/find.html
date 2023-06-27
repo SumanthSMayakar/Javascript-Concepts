@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find()</title>
+</head>
+<body>
+    <h3>The find() method returns the value of the first array element that satisfies the provided test function.it checks all the elements if the first element satisfies the condition is going to print. this function will not work function having the empty array elements and does not change the original array</h3>
+
+            <!-- syntax -->
+                <!-- array.find(function(currentValue, index, arr),thisValue); -->
+
+    <!-- Parameters: This method accepts 2 parameters  -->
+        <!-- function: it is the function of array that works on each element -->
+
+
+        <script>
+            let array = [-10,-0.20, 0.30,-40,-50];
+
+                let result = array.find(function(array){
+                    return array > 0
+                })
+            console.log(result)
+        </script>
+</body>
+</html>

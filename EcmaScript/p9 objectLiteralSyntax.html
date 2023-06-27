@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+    <h3>ES6 ENHANCEMENTS IN OBJECT LITERAL SYNTAX</h3>
+
+    <script>
+        let workingDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']
+
+        let shift = {
+            Mon: '10AM - 7PM',
+            Tue: '10AM - 7PM',
+            Wed: '10AM - 7PM',
+            Thu: '10AM - 7PM',
+            Fri: '10AM - 7PM'
+        }
+
+        //1.VARIABLES ARE ASSIGNED IMPLICITELY TO THE PROPERTISED WITH SAME NAME
+        // IF WE ARE NOT ASSIGNED ANY VALUE TO THAT PROPERTY EXPLICITELY
+
+        // 2. ENHANCEMENT IN THE WAY WE CREATE METHODS FOR AN OBJECT 
+
+        // 3. JAVASCRIPT EXPRESSIONS CAN BE USED AS PROPERTY FOR AN OBJECT
+        let employee = {
+            id: 101,
+            name: "John",
+            birthYear: 1999,
+            workingDays,
+            shift,
+
+            calculateAge(){
+                let age = 2021-this.birthYear;
+                console.log(age)
+            }
+        }
+
+        console.log(employee)
+        employee.calculateAge()
+    </script>
+</body>
+</html>

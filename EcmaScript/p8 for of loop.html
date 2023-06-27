@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+    <h3>JAVASCRIPT FOR...OF LOOP</h3>
+    <p>it is used to loop over any kind of iterables in javascript</p>
+    <p>it loops over sets maps and other data structures</p>
+
+    <script>
+        let students = ['ram', 'sham', 'bheem', 'lakshman','surya','chandra'];
+
+        let str = "hello from JavaScript";
+
+        // SYNTAX OF FOR..OF LOOP
+        // for(variable of iterable){
+
+        // }
+
+        // // LOOP OVER AN ARRAY USING FOR...OF     
+        // for (let item of students) {
+        //     console.log('students name =', item)
+        // };
+
+        // console.log('-------------------------');
+
+        // // LOOP OVER AN ARRAY USING FOR
+        // for (let i = 0; i< students.length; i++) {
+        //   console.log('students name =', students[i]) 
+           
+        // }
+
+        // // LOOP OVER A STRING USING FOR...OF
+        // for (let s of str) {
+        //     console.log(s)
+        // }
+
+        // WRITE A FUNCTION TO COUNT THE LENGTH OF A STRING 
+        // WITHOUT USING LENGTH PROPERTY 
+
+        function countStringLength(str){
+            let count = 0;
+            for(let s of str) {
+                count++
+            }
+            return count
+        }
+        console.log(countStringLength(str))
+        console.log(str.length)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript(OOPS)</title>
+</head>
+<body>
+    <h3>Objects</h3>
+
+        <script>
+            let car = {
+                //Key: value => property of an object
+                model : 2022,
+                color: "red",
+                brand: "etios",
+                company : "toyota",
+                isRunnable: true,
+                speed: () => {
+                    return "22kms is max speed"
+                } 
+            };
+
+            document.write(`<h3> object = ${car} </h3>`) //[object Object]
+            // Object cannot be destructured it should be called through dot(.)operator or square []operator
+
+            document.write(`<h3>car model = ${car.model}</h3>`)
+            document.write(`<h3>car brand = ${car.brand}</h3>`)
+            document.write(`<h3>car company = ${car.company}</h3>`)
+            document.write(`<h3>car color = ${car['color']}</h3>`) //square operator
+            document.write(`<h3>car speed = ${car.speed()}</h3>`)
+
+        </script>
+</body>
+</html>

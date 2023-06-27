@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Object.setPrototypeOf() method</h3>
+
+    <script>
+        // Object.setPrototypeOf({},cloned object()) => over write the properties of cloned object 
+        // it accepts two parameters({object}, cloned object)
+
+        const user = {
+            name : "Raj",
+            email: "raj@gmail.com",
+            mobile: "987654321",
+            age: 23
+        };
+
+        const user1 = Object.create(user)
+
+        console.log('before user1 =',user1)
+
+        let emp = {
+            bank: "SBI",
+            acc: 678643345677543456,
+            total: 1500
+        }
+        
+        console.log("over writing the cloned prototype =",emp)
+
+        Object.setPrototypeOf(emp,user1)
+
+        console.log("after user1 =",user1)
+    </script>
+</body>
+</html>

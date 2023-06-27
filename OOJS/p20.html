@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Constructor methods (ES-5)</h3>
+
+    <!-- Constructor or class Constructor
+    name of the constructor first letter starts with capital letter
+    create an constructor properties using 'this' keyword
+    create an instance to constructor using 'new' keyword
+    constructor cannot return -->
+
+    <script>
+        function User() {
+            this.name = "sam",
+            this.age = 22,
+            this.email= "sam@gmail.com"
+        };
+
+        //instance
+
+        let x  = new User();
+
+        console.log('constructor instance =', x)
+
+        document.write(`<h1> name = ${x.name} </h1>`)
+        document.write(`<h1> age = ${x.age} </h1>`)
+        document.write(`<h1> email = ${x.email} </h1>`)
+    </script>
+</body>
+</html>

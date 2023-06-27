@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>findIndex()</title>
+</head>
+<body>
+    <h3>The findIndex() method returns the index of the first array element that satisfies the condition or else returns -1</h3>
+    <h4>It does not execute the method once it finds an element satisfying the testing method</h4>
+    <h4>It does not changes the original array</h4>
+          
+    <!-- syntax -->
+                <!-- array.find(function(currentValue, index, arr),thisValue); -->
+
+    <!-- Parameters: This method accepts 2 parameters  -->
+        <!-- function: it is the function of array that works on each element -->
+        <!-- currentValue: This parameter holds the current value
+        index: it is an optional parameter holds the index of the current element
+        arr: it is an optional parameter holds the array object to which the current element belongs
+        thisValue: it is an optional parameter if a value is to be passed to the function to be used as its "this" value else the value "undefined" will be passed as its "this" value.
+
+    Return Value:it returns the array element index if any of the elements in the array pass the test otherwise it returns -1 -->
+
+    <script>
+        // function isOdd(element, index, array) {
+        //     return (element % 2 == 1);
+
+        // }
+
+        // console.log(([4,6,8,12].findIndex(isOdd)));
+
+        // function isOdd(element, index, array) {
+        //     return (element % 2 == 1);
+
+        // }
+
+        // console.log(([4,6,7,12].findIndex(isOdd)));
+
+        let colors = ["red","blue","orange","green","pink"];
+
+        let newColors = colors.findIndex(function(colors){
+            // console.log(colors)
+            return colors == "blue"
+        })
+
+        console.log(newColors)
+
+    </script>
+</body>
+</html>

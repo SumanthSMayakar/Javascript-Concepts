@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Object.getPrototypeOf() method</h3>
+
+    <script>
+        // Object.getPrototypeOf(cloned object) => return the properties of cloned object 
+
+        const user = {
+            name: 'sam',
+            email: 'sam@gmail.com',
+            mobile:987654432210,
+            age:25
+        };
+
+        console.log('user =',user)
+
+        const user1 = Object.create(user);
+
+            console.log('user1 =',user1)
+
+        let result = Object.getPrototypeOf(user1)
+        console.log('getPrototypeOf() result=',result)
+    </script>
+</body>
+</html>

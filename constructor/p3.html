@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        let user = {
+            name: "sam",
+            age: 22,
+            email:"sam@gmail.com",
+            isView: true,
+            hobbies: ["dance","playing","traveling"]
+        };
+        console.log("user =", user)
+
+        document.write(`<h3>name = ${user.name}</h3>`)
+        document.write(`<h3>age = ${user.age}</h3>`)
+        document.write(`<h3>email = ${user.email}</h3>`)
+        document.write(`<h3>isView = ${user.isView}</h3>`)
+        document.write(`<h3>hobbies = ${user.hobbies}</h3>`)
+        document.write(`<h3>hobbies = ${user.hobbies[1]}</h3>`) //calling using index number
+
+        // Destructuring the array 
+
+        user.hobbies.forEach(function(a){
+            document.write(`<h3 style = "color:red">hobbies = ${a}</h3>`)
+        })
+        
+
+    </script>
+</body>
+</html>

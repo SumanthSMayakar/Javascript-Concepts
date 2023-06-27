@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+
+    <h3>What is Destructuring</h3>
+    <p>Destructuring is a special assignment syntax in javascript that allows us to unpack arrays or objects into a bunch of variables</p>
+
+    <h2>There are two types of destructuring</h2>
+    <p>array destructuring</p>
+    <p>object destructuring</p>
+
+    <h1>Object Destructuring</h1>
+    <p>The variable name and the property name should be same while destructuring the Object</p>
+    <p>The object destructuring is based on the reference of the object</p>
+    <p>The reference name can be changed by giving alias name with reference of the object name (Eg: let {name: firstName, age: myAge, gender}) using colon </p>
+
+
+    <script>
+        // DESTRUCTURING OBJECTS
+
+        var employee = {
+            name: "steve",
+            age: 24,
+            gender: "male",
+            Area: ["London", "Uk"],
+            workDetails: {Experience: 5, company: "Google"}
+        }
+        
+        //DESTRUCTURING SYNTAX FOR OBJECTS
+        // let {name, age, gender} = employee;
+
+        // console.log(name);
+        // console.log(age);
+        // console.log(gender);
+
+        // WE CAN PROVIDE ALIAS NAME FOR THE VARIABLES
+        //BUT WE STILL NEED TO REFERENCE THE PROPERTY WHICH WE WANT TO DESTRUCTURE 
+        // let {name: firstName, age:a, gender: gen} = employee;
+
+        // console.log(firstName);
+        // console.log(a);
+        // console.log(gen); 
+
+
+        // WE CAN PROVIDE ALIAS NAME FOR THE VARIABLES
+        //BUT WE STILL NEED TO REFERENCE THE PROPERTY WHICH WE WANT TO DESTRUCTURE 
+        //DEFAULT VALUE CAN BE DEFINED DIRECTLY TO THE VARIABLE
+        let {name: firstName, age:a, gender: gen, lastName='Smith'} = employee;
+
+        console.log(firstName);
+        console.log(a);
+        console.log(gen); 
+        console.log(lastName);
+    </script>
+</body>
+</html>

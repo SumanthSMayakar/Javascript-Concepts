@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+    <h2>REST PARAMETER(...)</h2>
+
+    <p>The rest pattern or parameter collects rest of the values into an array or rest of the properties into an object </p>
+    <p>it is denoted by ...dots</p>
+    <p>rest parameter should be last one in the parameter list </p>
+
+    <script>
+        // THE REST PATTERN AND REST PARAMETER
+
+        // DESTRUCTURING OF ARRAYS 
+        let numbers = [10, 15, 20, 23, 30];
+        let [a, b, ...others] = numbers; //REST PATTERN ON ARRAY
+        console.log(a, b, others);
+
+        //REST PATTERN ON OBJECT
+        let num = {x: 10, y: 20, z:30, n:40, k:50};
+        let{x,y,...obj} = num
+        console.log(x, y, obj);
+
+        // REST PARAMETER
+        function addNumbers(num1, num2, ...num){
+            let sum = num1 + num2
+            for (let i = 0; i < num.length; i++) {
+                sum += num[i];
+            }
+            return sum;
+        }
+        console.log(addNumbers(20,30));
+        console.log(addNumbers(20,30,40));
+        console.log(addNumbers(20,30,40,50));
+    </script>
+</body>
+</html>

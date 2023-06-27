@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Object.entries() method</h3> 
+
+    <!-- It returns an array of object properties  -->
+
+    <script>
+
+        const user = {
+            name : "sam",
+            email: "sam@gmail.com",
+            mobile: "9876543211",
+            age:23
+        }
+
+        console.log("entries =",Object.entries(user)) // array[key,value] => entries
+
+        for(let[key, value] of Object.entries(user)) {
+            document.write(`<h3>${key}: ${value}</h3>`)
+        }
+
+
+    </script>
+</body>
+</html>

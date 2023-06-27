@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <script>
+        class Course {
+            constructor(ti,du){
+                document.write(`<h3> Constructor called </h3>`)
+                this.title = ti
+                this.duration = du
+            }
+
+            // static method 
+            static print(val) {
+                // will not allow this pointer 
+                // static function call possible only by class name
+                document.write(`<h1> This is static method </h1>`)
+                document.write(`<h1> Property Title = ${this.title} </h1>`)
+                document.write(`<h1> Property Title = ${val} </h1>`)
+
+            }
+
+            // non static
+            courseInfo() {
+                document.write(`<h1> ${this.title} ${this.duration} </h1>`)
+            }
+        }
+
+        Course.print('Be-practical')
+
+        let x = new Course("JavaScript","2months")
+        x.courseInfo() //method call w.r.t instance
+    </script>
+</body>
+</html>

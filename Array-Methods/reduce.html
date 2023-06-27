@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce() method</title>
+</head>
+<body>
+    <h3>The reduce() method executes a reducer function on each element of the array and returns a single output value </h3>
+
+    <!-- syntax -->
+    <!-- arr.reduce(callback(accumulator,(element or currentValue)initialValue) -->
+
+    <!-- Parameters: it consist of 2 parameters reduce(callback(accumulator,element),initialValue) -->
+        <!-- callback: The function to execute on each array element (except the first element if no initialValue is provided) it takes in.
+
+            accumulator : It accumulates the callback's return value 
+
+            current value : The current element being passed from the array. -->
+        
+        <!-- initialValue : A value that will be passed to callback() on first call. if not provided the first element acts as the first call and callback() wont execute on it. -->
+
+        <!-- Return Value: Returns the single value resulting after reducing the array  -->
+
+        <!-- Notes: 
+        reduce() executes the given function for each value from left or right -->
+        <!-- Calling reduce() on an empty array without initialValue will throw typeError -->
+
+    
+    <script>
+        // const mess = ["Javascript", "is", "fun"]
+
+        // function joinString(accumulator, currentValue) {
+        //     return accumulator + currentValue
+        // }
+
+        // let joinedString = mess.reduce(joinString)
+        // console.log(joinedString)
+
+        // Remove duplicate elements from the array
+        const char = ["A", "B", "C", "B", "A", "D","C"];
+        console.log(char)
+
+        let newChar = char.reduce((accumulator,currentValue) => {
+            // console.log(accumulator);
+            if(accumulator.indexOf(currentValue) === -1) {
+                accumulator.push(currentValue)
+            }
+            return accumulator
+        }, [])
+
+        console.log(newChar)
+    </script>
+
+
+</body>
+</html>

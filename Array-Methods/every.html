@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>every() method</title>
+</head>
+<body>
+    <h4>In this method it considers all the elements of an array and then checks whether all the elements satisfies the given condition or not that is provided by a method passed to it as the argument. </h4>
+
+        <!-- syntax -->
+        <!-- Arrow function -->
+            <!-- every((element,index,array) => {condition}) -->
+
+        <!-- Callback function  -->
+            <!-- every(Callback,thisArg)  -->
+
+        <!-- Inline callback function -->
+            <!-- every(function (element,index,array) {condition}) -->
+
+         <!-- Parameter : This method accepts two parameter -->
+
+            <!-- callback: it is the function of array that works on each element -->
+            <!-- element: This parameter holds the current value
+            index: it is an optional parameter holds the index of the current element
+            arr: it is an optional parameter holds the array object to which the current element belongs
+            thisArg: it is an optional parameter if a value is to be passed to the function to be used as its "this" value else the value "undefined" will be passed as its "this" value.
+
+        Return Value:it returns true if all of the element of the array satisfies the condition if any of the element of the array doesn't satisfies it returns false -->
+
+                <script>
+                    function checkAdult(age) {
+                        return age >= 18;
+                    }
+
+                    const ageArray = [34, 23, 20, 26, 13];
+
+                    let check = ageArray.every(checkAdult)
+
+                    console.log(check)
+                </script>
+
+                <script>
+                    let number = [1,2,3,4,5];
+
+                    let result = number.every(element => element < 6);
+
+                    console.log(result)
+                </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Static Method</h3>
+
+    <script>
+        class Person{
+            constructor(){
+                document.write(`<h1>Hi i am a Constructor</h1>`);
+                this.name = "Mahesh"
+            }
+
+            static getName(na) {
+                document.write(`<h3> getName = ${this.name} </h3>`)
+                console.log(' hi ' + na + " welcome to js ")
+            }
+
+            
+        }
+
+        Person.getName("Raju")
+    </script>
+</body>
+</html>

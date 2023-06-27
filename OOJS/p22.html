@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Prototype keyword => It is used to create property to an constructor externally</h3>
+
+    <script>
+        function User() {
+            this.name = "Manu",
+            this.getName = function() {
+                document.write(`<h2>my name is ${this.name}</h2>`)
+            } 
+        }
+
+        // constructor.prototype.property = value; 
+
+        User.prototype.email = "manu@gmail.com"
+        User.prototype.getEmail = function(){
+            document.write(`<h2>my email is ${x.email}</h2>`)
+        };
+
+        let x = new User();
+
+        console.log('user instance =',x)
+
+        document.write(`<h2> name = ${x.name} </h2>`)
+        document.write(`<h2> email = ${x.email} </h2>`)
+
+        x.getName()
+        x.getEmail()
+    </script>
+</body>
+</html>

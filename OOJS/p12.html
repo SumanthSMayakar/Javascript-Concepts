@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Object property destructuring using loop</h3>
+
+    <!-- for in statement iterates over the property of the object  -->
+
+    <script>
+        const user = {
+            name: "sam",
+            email: "sam@gmail.com",
+            mobile: 9876543210,
+            age:34
+        };
+
+        for (const item in user) {
+            document.write(`<h3>${item} : ${user[item]}</h3>`)
+        }
+    </script>
+</body>
+</html>

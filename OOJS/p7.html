@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Object.defineProperties() method</h3>
+
+    <!-- It will allow to add or create multiple values of properties from outside the object  -->
+
+    <script>
+        let user = {
+            name : "sam"
+        };
+
+        console.log(user)
+
+        Object.defineProperties(user, {
+            email: {
+                value: "sam@gmail.com"
+            },
+            mobile: {
+                value: 987766543334
+            },
+            age:{
+                value:27
+            }
+        });
+        console.log(user)
+    </script>
+</body>
+</html>

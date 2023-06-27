@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Object to array conversion using .keys & .map()</h3>
+
+    <script>
+        let user = {
+            name : "sam",
+            age : "33",
+            email: "sam@gmail.com"
+        }
+
+        let res = Object.keys(user).map(function(key){
+            return user[key]; //only values will be accessed
+        })
+
+        console.log('res =',res)
+    </script>
+</body>
+</html>

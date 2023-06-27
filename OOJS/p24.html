@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Class ES-6</h3>
+
+    <script>
+        // class => group of objects
+        // objects => group of state(variables) and behaviour(methods)
+
+        class User {
+            constructor(){
+                this.name = "ram",
+                this.email = "ram@gmail.com",
+                this.age = 24,
+                this.isAdmin = true,
+                this.hobbies = ['trekking','traveling','dancing'];
+                this.account = {
+                    bank: "SBI",
+                    accNo : 67654567,
+                }
+            }
+
+            getUserInfo(){
+                return this.name;
+            }
+
+            getEmail() {
+                document.write(`<h3>email = ${this.email}</h3>`)
+            }
+        }
+
+        // Create instance to constructor using new keyword
+        let x = new User()
+
+        console.log('user =',x);
+
+        document.write(`<h3>name = ${x.name} </h3>`)
+        document.write(`<h3>email = ${x.email} </h3>`)
+        document.write(`<h3>age = ${x.age} </h3>`)
+        document.write(`<h3>isAdmin = ${x.isAdmin} </h3>`)
+        document.write(`<h3>bank = ${x.account.bank} </h3>`)
+        document.write(`<h3>accNo = ${x.account.accNo} </h3>`)
+
+        x.hobbies.forEach(function(hobby, index) {
+            document.write(`<h3> ${hobby} ${index}</h3>`)
+        });
+
+        document.write(`<h3> getUserInfo = ${x.getUserInfo()} </h3>`);
+
+        x.getEmail()
+    </script>
+</body>
+</html>

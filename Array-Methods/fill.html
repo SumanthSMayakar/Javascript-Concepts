@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fill() method</title>
+</head>
+<body>
+    <h3>The Javascript Array fill() methods fills a given range of array elements with the given value.This method it is used to manipulating the existing array</h3>
+
+        <!-- syntax  -->
+            <!-- arr.fill(value,start,end) -->
+<!-- 
+    Parameters : This method accepts three parameters.
+        value: value to be filled
+        start: start index(included) and its default value is 0
+        end: end index (excluded) and its default index is this.length  -->
+    
+    <!-- Return value : it returns the modified value  -->
+
+    <script>
+        let array = [1,2,3,4]
+        console.log(array.fill(0,2,4))
+
+        let array1 = [1,2,3,4,5,6]
+        console.log(array1.fill(6,2,))
+
+        let array3 = [1,2,3,4]
+        console.log(array.fill(6))
+    </script>
+</body>
+</html>

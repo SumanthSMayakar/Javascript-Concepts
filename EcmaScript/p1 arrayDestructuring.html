@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+
+    <h3>What is Destructuring</h3>
+    <p>Destructuring is a special assignment syntax in javascript that allows us to unpack arrays or objects into a bunch of variables</p>
+
+
+    <h2>There are two types of destructuring</h2>
+    <p>array destructuring</p>
+    <p>object destructuring</p>
+
+    <h1>Array Destructuring</h1>
+    <p>Array destructuring will not destroy the original array</p>
+    <p>The array destructuring uses the position of the element</p>
+
+    <script>
+        //DESTRUCTURING SYNTAX FOR ARRAYS
+        let person = ['John', 'Smith', 28];
+
+        let [firstName, lastName, age, gender='Male'] = person; //let [firstName, lastName, age, gender='Male'] DEFAULT VALUE FOR GENDER
+
+        console.log(firstName);
+        console.log(lastName);
+        console.log(age);
+
+        console.log(person); //ARRAY DESTRUCTURING WILL NOT DESTROY ORIGINAL ARRAY
+
+        //WE SHOULD ALWAYS USE A VALID VARIABLE NAME WHILE DESTRUCTURING
+        // let [123, 345, 56] = person;
+
+        //DESTRUCTURING FIRST & SECOND ELEMENT OF THE VARIABLE
+        // let [firstName, lastName] = person;
+
+        // console.log(firstName);
+        // console.log(lastName);
+
+        // console.log(person)
+
+
+        // DESTRUCTURING FIRST & THIRD ELEMENT OF THE VARIABLE
+        // let [firstName, , age] = person;
+
+        // console.log(firstName);
+        // console.log(age);
+
+        // console.log(person)
+
+    </script>
+</body>
+</html>  

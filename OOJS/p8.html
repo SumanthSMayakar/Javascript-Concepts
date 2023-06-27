@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Object.assign() method</h3>
+
+    <!-- It is used to merge common properties in a single object  -->
+
+    <script>
+        var user = {
+            name: "sam",
+            gmail: "sam@gmail.com"
+        }
+
+        var user1 = {
+            age: 23,
+            gmail:"sam123@gmail.com"
+        }
+
+        console.log(user)
+        console.log(user1)
+
+        // merge the properties of an objects, it hold last property if any common property exists
+        let res = Object.assign(user,user1)
+        console.log(res)
+    </script>
+</body>
+</html>

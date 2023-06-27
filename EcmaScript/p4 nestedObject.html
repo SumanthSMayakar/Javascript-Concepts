@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+    <h1>Nested Object</h1>
+    <p>Destructuring of Nested Object</p>
+
+    <script>
+        // DESTRUCTURING OBJECTS
+
+        var employee = {
+            name: "steve",
+            lastName: 'clark',
+            age: 24,
+            gender: "male",
+            Area: ["London", "Uk"],
+            workDetails: {Experience: 5, company: "Google"}
+        }
+        
+        //DESTRUCTURING SYNTAX FOR OBJECTS
+        // let {name, age, gender} = employee;
+
+        // console.log(name);
+        // console.log(age);
+        // console.log(gender);
+
+        // WE CAN PROVIDE ALIAS NAME FOR THE VARIABLES
+        //BUT WE STILL NEED TO REFERENCE THE PROPERTY WHICH WE WANT TO DESTRUCTURE 
+        // let {name: firstName, age:a, gender: gen} = employee;
+
+        // console.log(firstName);
+        // console.log(a);
+        // console.log(gen); 
+
+
+        // WE CAN PROVIDE ALIAS NAME FOR THE VARIABLES
+        //BUT WE STILL NEED TO REFERENCE THE PROPERTY WHICH WE WANT TO DESTRUCTURE 
+        //DEFAULT VALUE CAN BE DEFINED DIRECTLY TO THE VARIABLE
+        let {name: firstName, age:a, gender: gen, lastName='Smith',workDetails:{Experience:exp, company}} = employee;
+
+        console.log(firstName);
+        console.log(a);
+        console.log(gen); 
+        console.log(lastName);
+        console.log(exp, company);
+
+        //MUTATING VARIABLE VALUE (MEANS CHANGING THE GIVEN VALUES)
+        let x = 110;
+        let y = 120;
+
+        let obj = {x:10, y:20};
+        ({x,y} = obj);
+
+         console.log(x,y);
+
+         //DESTRUCTURING OBJECT RETURNED BY A FUNCTION
+         function returnObj(){
+            return {id: 101, userName: "js"};
+         } 
+
+         let{id,userName} = returnObj();
+         console.log(id,userName);
+        
+         //DESTRUCTURING NESTED ARRAY OF AN OBJECT
+         let {Area: [city, country]} = employee;
+         console.log(city,country)
+
+        
+    </script>
+</body>
+</html>

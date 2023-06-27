@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Super Key (for invoking super class)</h3>
+
+    <script>
+        class Company {
+            constructor(x,y){
+                this.empId = x;
+                this.empDes = y;
+            }
+
+            getEmpInfo(){
+                return `Employee Id = ${this.empId} and Employee Des = ${this.empDes}`
+            }
+        }
+
+        // base class 
+        class Emp extends Company {
+            constructor(na,em,id,de) {
+                super(id,de); 
+                // own property of base class
+                this.name = na; 
+                this.email = em;
+            }
+        
+            getEmpInfo(){
+                document.write(`<h1> ${super.getEmpInfo() } </h1>`)
+                return `Name = ${this.name} and Email= ${this.email} loads`
+            }
+        }
+
+        let empDetails = new Emp("Sumanth","sumanth@gmail.com",1002,"SoftwareDeveloper");
+         
+        document.write(`<h1>${empDetails.getEmpInfo() }</h1>`)
+    </script>
+</body>
+</html>

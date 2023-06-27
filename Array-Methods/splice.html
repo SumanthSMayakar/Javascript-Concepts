@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>splice() Method</title>
+</head>
+<body>
+    <h4>The JS Array splice() Method is an inbuilt method in JS that is used to modify the contents of an array by removing the existing elements and by adding new elements </h4>
+
+        <!-- syntax -->
+        <!-- Array.splice(index, remove_count, item_list) -->
+
+    <!-- Parameter: This method accepts many parameters some of which are described below: -->
+
+            <!-- index: It is a required parameter.This parameters is the index from which the modification of the array starts (with the origin at 0). This can be negative also, which begins after many elements counting from the end. -->
+
+            <!-- remove_count: The number of elements to be removed from the starting index. -->
+
+            <!-- item_list: The list of new items separated by a comma operator that is to be inserted from the starting index  -->
+
+        <!-- Return value: While it mutates the original array in place. still it returns the list of removed the list of removed items.In case there is no removed array it returns an empty array  -->
+
+        <script>
+            let arr = ["sam", "ram", "can", "raj"];
+            document.write(`<h3> before splice = ${arr} </h3>`)
+
+            arr.splice(0,2, "pranav","gokul")
+            // console.log(arr)
+            document.write(`<h3> after splice from left = ${arr} </h3>`)
+
+            arr.splice(-2,2, "gokul","pranav")
+            // console.log(arr)
+            document.write(`<h3> after splice from right = ${arr} </h3>`)
+        </script>
+</body>
+</html>

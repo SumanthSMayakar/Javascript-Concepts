@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Object.keys() method</h3>
+
+    <!-- it returns array of keys -->
+
+    <script>
+        let user = {
+            name : "sam",
+            age: 23,
+            mail:"sam@gmail.com",
+            mobile:7865635369
+        };
+
+        console.log(Object.keys(user));
+
+        for(let item of Object.keys(user)) {
+            document.write(`<h3>${item}</h3>`)
+        }
+    </script>
+</body>
+</html>

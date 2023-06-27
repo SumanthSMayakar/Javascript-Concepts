@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map() method</title>
+</head>
+<body>
+    <h3>The map()method is used to iterate over an array and calling function on every element of the array</h3>
+    <p>It is a non-mutating method</p>
+
+     <!-- syntax -->
+        <!-- Arrow function -->
+            <!-- every((element,index,array) => {condition}) -->
+
+        <!-- Callback function  -->
+            <!-- every(Callback,thisArg)  -->
+
+        <!-- Inline callback function -->
+            <!-- every(function (element,index,array) {condition}) -->
+
+         <!-- Parameter : This method accepts two parameter -->
+
+            <!-- callback: it is the function of array that works on each element -->
+            <!-- element: This parameter holds the current value
+            index: it is an optional parameter holds the index of the current element
+            arr: it is an optional parameter holds the array object to which the current element belongs
+            thisValue: it is an optional parameter and is used to hold a value passed to the function 
+
+        Return Value:it returns a new array and elements of arrays are the result of the callback function -->
+
+    
+    <script>
+        let num = [2,4,6,8,10]
+
+            function square(num) {
+                return num * num ;
+            }
+
+        let square_num = num.map(square);
+        console.log(square_num)
+    </script>
+
+</body>
+</html>

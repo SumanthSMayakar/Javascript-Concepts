@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented JavaScript (OOJS)</title>
+</head>
+<body>
+    <h3>Parameterized Class</h3>
+
+    <script>
+        class Sum {
+            constructor(x,y){
+                this.a = x,
+                this.b = y
+            }
+
+            calculate() {
+                return this.a + this.b
+            }
+        }
+
+        let s = new Sum(24,65)
+        let s1 = new Sum(56,87)
+
+        console.log(s)
+        console.log(s1)
+
+        document.write(`<h1>calculate = ${s.calculate()}</h1>`)
+        document.write(`<h1>calculate = ${s1.calculate()}</h1>`)
+    </script>
+</body>
+</html>

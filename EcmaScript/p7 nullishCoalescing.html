@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+    <h3>Nullish Coalescing operator</h3>
+    <h4>it is used to handle null or undefined values in JavaScript</h4>
+    <p>it is a binary operator</p>
+    <p>it is logical operator</p>
+    <p>it is represented by ??. for example = a ?? b</p>
+    <h4>it returns the value of first operand if its value is not null or undefined.Otherwise, it returns the value of second operand.</h4>
+
+    <script>
+        let a = 20;
+        let b = "height is not defined"
+        let height;
+
+        // height = ( a== null || a == undefined) ? b : a; //ternary operator
+
+        // height = a ?? b
+        // console.log(height)
+
+        // DIFFERENCE BETWEEN || OPERATOR AND ?? OPERATOR 
+        
+        // OR OPERATOR RETURNS THE FIRST TRUTHY VALUES 
+        // Truthy value - Everything except (0, '' ,null, undefined, false) 
+        // height = a || b;
+        // console.log(height)
+
+        // ??NULLISH COALESCING OPERATOR RETURNS THE VALUE OF FIRST OPERAND IF ITS VALUE IS NOT NULL OR UNDEFINED. OTHERWISE IT RETURNS THE VALUE OF SECOND OPERAND
+
+        // height = a ?? b
+        // console.log(height)
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexOf() method</title>
+</head>
+<body>
+    <h3>The JS Array indexOf() Method is used to find the index of the first occurrence of the search element </h3>
+
+        <!-- syntax -->
+         <!-- array.indexOf(element,start)  -->
+
+    <!-- Parameters : This method accepts two parameters   -->
+
+        <!-- element : This parameter holds the element whose index will be removed  -->
+
+        <!-- start: This parameter is optional and it holds the starting point of the array, the default value 0  -->
+
+    <!-- Return Value : This method returns the index of the first occurrence of the element. if the element cannot be found then this method returns -1.  -->
+
+        <script>
+            let arr = ["sam", "ram", "nam"];
+              am = arr.indexOf("ram")
+                console.log(am)
+
+             let arr1 = ["sam", "ram", "nam", "dam"];
+              am = arr1.indexOf("ra")
+                console.log(am)
+
+             let arr2 = ["sam", "ram", "nam", "ram"];
+              am = arr2.indexOf("ram",2)
+                console.log(am)
+        </script>
+</body>
+</html>

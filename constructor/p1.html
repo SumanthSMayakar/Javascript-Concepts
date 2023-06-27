@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date() method</title>
+</head>
+
+<style>
+    #myClock {
+        background-color: blue;
+        color: yellow;
+        padding: 20px;
+        width: 13%;
+        font-size: 3em;
+    }
+    h1{
+        color:red;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Digital-clock</h1>
+
+    <h3 id="myClock"></h3>
+
+    <script>
+        function digiClock() {
+            var today = new Date()
+            document.getElementById("myClock").innerText = today.toLocaleTimeString();
+        }
+
+        setInterval(function(){
+            digiClock()
+        },1000)
+    </script>
+</body>
+</html>

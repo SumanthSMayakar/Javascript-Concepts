@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter() method</title>
+</head>
+<body>
+    <h3>The JavaScript Array filter() method is used to create a new array from a given array consisting of only those elements from the given array which satisfy a condition set by the argument method</h3>
+    <p>filter() does not execute callback for array elements without value</p>
+
+     <!-- syntax -->
+            <!-- array.filter(callback(element,index,array) => {condition}) -->
+
+         <!-- Parameter : This method accepts two parameter -->
+
+            <!-- callback: it is the function of array that works on each element -->
+            <!-- element: This parameter holds the current value
+            index: it is an optional parameter holds the index of the current element
+            arr: it is an optional parameter holds the array object to which the current element belongs
+            thisArg: it is an optional parameter it holds the context to be passed as this is to be used while executing the callback function.if the context is passed, it will be used like this for each invocation  of the callback funcrion otherwise undefined is used as default
+
+        Return Value:This method returns a new array consisting of only those elements that satisfied the condition of the argument function -->
+
+
+                    <script>
+                        let num = [1,2,3,4,5,6,7,8,9,10]
+
+                        function checkEven(num) {
+                            if (num % 2 == 0)
+                                return true;
+                            else
+                                return false;
+                        }
+
+                        //create a new array by filter even numbers from the numbers array
+                        let evenNumber = num.filter(checkEven);
+                        console.log(evenNumber);
+
+                        const prices = [1800, 2000, null, 3000, 5000, "Thousand", 500,8000]
+
+                        function checkPrice(price) {
+                            return price > 2000 && !Number.isNaN(price)
+                        }
+
+                        let filteredPrices = prices.filter(checkPrice);
+                        console.log(filteredPrices)
+                    </script>
+
+                    <script>
+                        const languages = ["Javascript", "Python", "React", "Java", "Node"]
+
+                        function searchFor(arr,query) {
+                            function condition(element) {
+                                return element.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+                            }
+                            return arr.filter(condition);
+                        }
+
+                        let newArr = searchFor(languages, "ja");
+                        console.log(newArr);
+
+                        //using arrow function
+                        const searchArr = (arr,query) => arr.filter(element => element.toLowerCase().indexOf(query.toLowerCase()) !== -1)
+
+                        let newLanguages = searchArr(languages, "p");
+                        console.log(newLanguages)
+                    </script>
+</body>
+</html> 
