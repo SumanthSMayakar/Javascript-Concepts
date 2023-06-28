@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+    <h1>ES-6 DATA STRUCTURE</h1>
+    <p>map</p>
+    <p>set</p>
+
+    <h1>What are Sets in JAVASCRIPT</h1>
+    <p>A set is just a collection of unique values</p>
+    <p>sets can never have duplicate entries </p>
+    <p>sets cannot be accessed by index number</p>
+    <p>set cannot be retrived</p>
+    <p>set can be iterable</p>
+
+    <h3>A sei is different from array in the way that</h3>
+    <p>Elements of a set are unique</p>
+    <p>The order of element in the set is irrelevant</p>
+
+    <h3>Properties & Methods of Set</h3>
+    <p>size : returns the numbers of elements in a set</p>
+    <p>has() : returns true if a certain elements is present in the set</p>
+    <p>add() : adds a new unique elements to the set</p>
+    <p>delete() : Delete an elements from the set</p>
+    <p>clear() : Delete all the elements of the set</p>
+
+    <script>
+        //CREATING A NEW SET
+        let cities = new Set(['London','New York','Mumbai','London','Delhi']);
+        console.log(cities);
+
+        let randomData = new Set([12, true, 'Hello', null]);
+        console.log(randomData);
+
+        //STRING IS AN ITERABLE
+        let str = new Set(new String('Hello'));
+        console.log(str);
+
+        // size : returns the numbers of elements in a set
+        console.log(cities.size)
+
+        // has() : returns true if a certain elements is present in the set
+        console.log(cities.has('London'))
+        console.log(cities.has('Tokyo'))
+
+        // add() : adds a new unique elements to the set
+        cities.add('Tokyo')
+        console.log(cities);
+
+        // delete() : Delete an elements from the set
+        cities.delete('Delhi')
+        console.log(cities);
+
+        // clear() : Delete all the elements of the set
+        // cities.clear()
+        // console.log(cities);
+
+        //LOOPING OVER A SETS
+
+        for (const city of cities) {
+            console.log(city)
+        }
+
+        // USECASE 1: REMOVE DUPLICATE FROM AN ARRAY 
+
+        let names = ["ram", "krishna", "ram", "arjun", "bheem", "arjun"];
+        let namesSet = new Set(names);
+        let uqNamesArray = [...namesSet];
+        console.log(uqNamesArray)
+
+        // USECASE 2: COUNTING NUMBER OF UNIQUE CHARACTERS IN A STRING
+        let str1 = 'This is a String';
+        let strSet = new Set(str1)
+        console.log(strSet.size)
+
+    </script>
+</body>
+</html>

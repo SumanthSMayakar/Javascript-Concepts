@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // CREATING MAPS FROM ARRAYS AND OBJECTS  
+
+        // let user = new Map ([
+        //     ['name' , 'John'],
+        //     ['age', 23],
+        //     ['gender', 'Male'],
+        //     ['occupation', 'Teacher']
+        // ]);
+
+        // user.set('name','John');
+        // user.set('age',28);
+
+        // console.log(user);
+
+        // CONVERT AN OBJECT INTO A MAP 
+        let customer = {
+            id: 101,
+            name: 'Mark',
+            gender: 'Male',
+            city:'London' 
+        }
+
+        // 1. CUSTOMER OBJECT.ENTRIES() TO CREATE AN ARRAY FROM THE OBJECT 
+        let customerArray = Object.entries(customer);
+        
+        // 2. PASSED THAT ARRAY TO THE CONSTRUCTOR OF THE MAP 
+        let customerMAP = new Map(customerArray)
+        // console.log(customerMAP);
+
+        // //CONVERTING MAP INTO ARRAY
+        // let x = [...customerMAP];
+        // console.log(x);
+
+        // //CONVERTING MAP INTO ARRAY WITH ONLY KEYS
+        // let y = [...customerMAP.keys()];
+        // console.log(y);
+
+        // //CONVERTING MAP INTO ARRAY WITH ONLY VALUES
+        // let z = [...customerMAP.values()];
+        // console.log(z);
+
+        // let u = [...customerMAP.entries()];
+        // console.log(u);
+
+        //LOOPING OVER MAPS
+        for (let [key, value] of customerMAP) {
+            console.log(`Value for key ${key} : ${value}`)
+        }
+    </script>
+</body>
+</html>

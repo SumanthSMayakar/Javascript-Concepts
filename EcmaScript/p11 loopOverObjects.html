@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+    <h1>LOOPING OVER OBJECTS ?</h1>
+    <p>Object is not an iterable on loop </p>
+    <p>Only array and string are iterable</p>
+    <p>When we want to loop over an object,we have different options deepening upon what we want to loop over.We can loop over </p>
+    <ul>
+        <li>Objects property name</li>
+        <li>Objects property value</li>
+        <li>Both on Objects property and value</li>
+    </ul>
+
+    <script>
+        // HOW TO LOOP OVER OBJECTS IN JAVASCRIPT
+
+        let user = {
+            name: 'john',
+            age: 20,
+            occupation: 'Teacher',
+            gender: 'male'
+        }
+
+        // LOOPING OVER OBJECT PROPERTY NAMES
+        // KEYS METHOD WILL RETURN IN ARRAY 
+        // THAT ARRAY WILL CONTAIN ALL THE PROPERTIES OF PASSED OBJECT AS ITS ELEMENT 
+
+        let properties = Object.keys(user)
+        console.log(properties)
+        console.log(properties.length)
+
+        for (const prop of properties) {
+            console.log(prop);
+        }
+
+
+
+        // LOOPING OVER OBJECT PROPERTY VALUES
+        // KEYS METHOD WILL RETURN IN ARRAY 
+        // THAT ARRAY WILL CONTAIN ALL THE PROPERTIES OF PASSED OBJECT AS ITS ELEMENT 
+
+        let value = Object.values(user)
+        console.log(value)
+
+        for (const val of value) {
+            console.log(val)
+        }
+
+        //LOOPING OVER BOTH PROPERTY NAME ANS PROPERTY VALUE
+
+        let entries = Object.entries(user)
+        console.log(entries)
+
+        for (const [key, val] of entries) {
+            console.log(`${key} : ${val}`)
+        }
+    </script>
+</body>
+</html>
