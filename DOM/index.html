@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM and DOM Manipulation</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="header" id="head">
+        <h1>JavaScript DOM and DOM Manipulation</h1>
+    </div>
+
+    <div class="container">
+        <!-- img element -->
+        <img src="assets/images/Lion.jpeg" alt="" height="170" width="400">
+
+        <!-- A heading element with id = heading -->
+        <h1 id="heading">JavaScript Course</h1>
+
+        <!-- A paragraph element with id = intro -->
+        <p id="intro">
+            paragraph-1 In this section, we will learn about DOM Manipulation using JavaScript language.
+        </p>
+
+        <!-- A paragraph element with id = dynamicContent and no text content-->
+        <p id="dynamicContent"></p>
+
+        <div class="list">
+            <h2>Section topics</h2>
+            <ul>
+                <li>Accessing DOM element</li>
+                <li>Modifying DOM element</li>
+                <li>Adding new DOM element</li>
+                <li>Removing existing DOM element</li>
+            </ul>
+        </div>
+
+        <div class="form">
+            <h2 id="registration">Registration Form</h2>
+            <form>
+                <label for="fname">First Name</label>
+                <input type="text" name="firstname" id="fname" placeholder="">
+                
+                <label for="lname">Last Name</label>
+                <input type="text" name="lastname" id="lname" placeholder="">
+
+                <label for="fname">Add</label>
+                <input type="text" name="" id="add" placeholder="">
+            </form>
+        </div>
+    </div>
+
+
+    <!-- <script src="DOM.js"></script> -->
+    <!-- <script src="./AccessingAndModifyingDOM.js"></script> -->
+    <script src="./ChangingStyleandAttributeDynamically.js"></script>
+</body>
+</html>
