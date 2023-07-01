@@ -9,7 +9,7 @@
 // .addEventListener('click',displayAlert)
 
 
-// ANOYNOMONUS FUNCTION 
+// ANYONUMOS FUNCTION 
 document.getElementById('btn')
 .addEventListener('click',function(){
     alert('You submitted the form');
