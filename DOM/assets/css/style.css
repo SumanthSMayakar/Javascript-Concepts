@@ -173,3 +173,8 @@ input[type=button]:hover {
     border: 0px solid;
     background-color: #45a049  ;
 }
+.impor-update{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
