@@ -1,0 +1,9 @@
+// WHAT IS A PROMISE ?
+
+// A promise is a special JavaScript Object which is used as a place holder for the future result of an asynchronous operation
+
+// A JavaScript Promise,promises a result 
+// Every promises has an executer function that gets executed immediately when we create a promise 
+// initially,when the promise is created, it is in pending state. The data returned by the promise in pending state is undefined 
+// The state of the promise changes to settled when the promise is either resolved or rejected. 
+// If the promise is resolved then it returns the resolved data. Otherwise, if the promise is rejected it returns the rejected data(i.e some error message)

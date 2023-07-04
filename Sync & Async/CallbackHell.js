@@ -35,6 +35,7 @@ function  displayCountry(data){
         </article>`;
         countriesContainer.insertAdjacentHTML("beforeend",html)
 }
+// Make Ajax Request 
 function makeAjaxRequest(countryName){
     // 1.Create an XMLHttpRequest object 
     let xhr = new XMLHttpRequest();
