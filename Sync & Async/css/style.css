@@ -38,3 +38,10 @@
     display: inline-block;
     margin-right: 1rem;
 }
+#btn-load{
+    padding: 0.8rem 3rem;
+    margin: 1rem;
+    border-radius: 0.2rem;
+    border: none;
+    background-color: aquamarine;
+}

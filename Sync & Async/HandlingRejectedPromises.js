@@ -1,4 +1,5 @@
-// AVOIDING CALLBACK HELL WITH PROMISES 
+// HANDLING REJECTED PROMISES  
+
 let countriesContainer = document.querySelector('.countries')
 function  displayCountry(data){
     let html =
@@ -12,9 +13,7 @@ function  displayCountry(data){
         </article>`;
         countriesContainer.insertAdjacentHTML("beforeend",html)
 }
-
-
-
+ 
 function getCountry(){
     //MAKE AJAX request
      fetch('https://restcountries.com/v3.1/name/usa')
@@ -42,7 +41,18 @@ function getCountry(){
     })
     .catch(function(error){
         console.log(error)
+        countriesContainer.insertAdjacentText('beforeend',`Something went wrong. Error message: ${error.message }`)
     })
+    // .finally(function(){
+    //     console.log('Finally method called')
+    // })
     
 }
-getCountry()
+
+document.getElementById('btn-load')
+.addEventListener('click',function(){
+    getCountry()
+})
+
+// FINALLY METHOD 
+// finally () method executes weather the promise is either resolved or rejected
