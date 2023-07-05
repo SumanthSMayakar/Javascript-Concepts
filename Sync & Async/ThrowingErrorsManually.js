@@ -1,4 +1,5 @@
-// AVOIDING CALLBACK HELL WITH PROMISES 
+// THROWING ERRORS MANUALLY 
+
 let countriesContainer = document.querySelector('.countries')
 function  displayCountry(data){
     let html =
@@ -12,12 +13,15 @@ function  displayCountry(data){
         </article>`;
         countriesContainer.insertAdjacentHTML("beforeend",html)
 }
-
+ 
 function getCountry(){
     //MAKE AJAX request
      fetch('https://restcountries.com/v3.1/name/usa')
     .then(function(response){
         console.log(response)
+        if(!response.ok){
+            throw new Error(`Country not found (${response.status})`)
+        }
         //json method returns a promise
         return response.json();
     })
@@ -26,13 +30,19 @@ function getCountry(){
         return fetch('https://restcountries.com/v3.1/name/brazil')
     })
     .then(function(response){
+        if(!response.ok){
+            throw new Error(`Country not found (${response.status})`)
+        }
         return response.json();
     })
     .then(function(data){
         displayCountry(data[0])
-        return fetch('https://restcountries.com/v3.1/name/germany')
+        return fetch('https://restcountries.com/v3.1/name/abc')
     })
     .then(function(response){
+        if(!response.ok){
+            throw new Error(`Country not found (${response.status})`)
+        }
         return response.json()
     })
     .then(function(data){
@@ -40,7 +50,15 @@ function getCountry(){
     })
     .catch(function(error){
         console.log(error)
+        countriesContainer.insertAdjacentText('beforeend',`Something went wrong. Error message: ${error.message}`)
     })
+    // .finally(function(){
+    //     console.log('Finally method called')
+    // })
     
 }
-getCountry()
+
+document.getElementById('btn-load')
+.addEventListener('click',function(){
+    getCountry()
+})
